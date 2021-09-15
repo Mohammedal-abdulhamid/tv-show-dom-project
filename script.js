@@ -19,18 +19,27 @@ function makePageForEpisodes(episodeList) {
     creatEpisodeSeason.innerHTML = "season #" + episode.season;
     const creatEpisodeNumber = document.createElement("h2");
     creatEpisodeNumber.innerHTML = "episode number" + episode.number;
+    //features 3 of the requirement
+    const creatEpisodeCode = document.createElement("h3");
+    creatEpisodeCode.innerHTML = `${
+      "Code:" + " " + "S0" + episode.season + "E0" + episode.number
+    }`;
 
     const creatImage = document.createElement("img");
     creatImage.src = episode.image.medium;
-
+    const creatPElement = document.createElement("P");
+    creatPElement.innerHTML = episode.summary;
+    const creatReference = document.createElement("p");
+    creatReference.innerHTML = "Reference: " + episode._links.self.href;
     cardContainer.appendChild(creatEpisodeName);
     cardContainer.appendChild(creatEpisodeSeason);
     cardContainer.appendChild(creatEpisodeNumber);
+    cardContainer.appendChild(creatEpisodeCode);
 
     cardContainer.appendChild(creatImage);
-    const creatPElement = document.createElement("P");
-    creatPElement.innerHTML = episode.summary;
+
     cardContainer.appendChild(creatPElement);
+    cardContainer.appendChild(creatReference);
 
     episodeUl.appendChild(cardContainer);
   });
