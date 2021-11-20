@@ -1,3 +1,26 @@
 #root {
-  color: red;
+  color: rgb(6, 1, 14);
+  display:flex;
+ padding:10%;
+  
 }
+#search_button{
+width:12vw;
+margin:3px;
+height: 4vh;
+background-color: rgb(175, 204, 247);
+border-radius: 5px;
+}
+#search_bar{
+  width: 25vw;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+#select_bar,
+#select_show_bar {
+  width: 25vw;
+  margin-left: 30px;
+  border-radius: 5px;
+
+}
+
